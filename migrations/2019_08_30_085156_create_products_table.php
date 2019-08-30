@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('sku')->comment('stock keeping unit code');
             $table->string('hsn')->comment('Harmonized System of Nomenclature');
             $table->string('description');
-            $table->integer('gst', 2)->default(0)->comment('tax percentage on product i.e 0, 5, 12, 18 or 28');
+            $table->integer('gst')->default(0)->comment('tax percentage on product i.e 0, 5, 12, 18 or 28');
             $table->bigInteger('msrp')->default(0)->comment(' manufacturer\'s suggested retail price ');
             $table->bigInteger('sale_price')->default(0)->comment('Price at which you want to sale this product !');
             $table->boolean('status')->default(false);
